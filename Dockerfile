@@ -15,7 +15,7 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy built jar from the previous stage
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/AgricodeApp-*.jar app.jar
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
